@@ -5,8 +5,6 @@
 
 * type changelog ([4ba0570](https://github.com/Dlouxgit/workflow/commit/4ba05700e055e1a87d86b0b05ccdbc2d90d9987c))
 
-# Change Log
-
 
 ## [0.0.2](https://github.com/Dlouxgit/workflow/compare/v0.0.1...v0.0.2) (2023-06-07)
 

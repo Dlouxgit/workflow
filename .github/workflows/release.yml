@@ -1,4 +1,7 @@
-name: Release
+name: CI
+
+permissions:
+  contents: write
 
 on:
   push:
@@ -6,30 +9,26 @@ on:
       - main
 
 jobs:
-  release:
-    name: Release
-    runs-on: ubuntu-18.04
+  test:
+    name: Test
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-
-      - uses: pnpm/action-setup@v2
-        name: Install pnpm
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
         id: pnpm-install
         with:
           version: 7
-          run_install: false
+          run_install: true
 
-      - name: Install dependencies
-        run: pnpm install
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18.16
+          cache: pnpm
 
-      - name: Install dependencies
-        run: npm ci
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}

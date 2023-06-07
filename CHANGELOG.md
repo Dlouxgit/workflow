@@ -1,3 +1,10 @@
+# [0.1.0](https://github.com/Dlouxgit/workflow/compare/v0.0.2...v0.1.0) (2023-06-07)
+
+
+### Features
+
+* type changelog ([4ba0570](https://github.com/Dlouxgit/workflow/commit/4ba05700e055e1a87d86b0b05ccdbc2d90d9987c))
+
 # Change Log
 
 
